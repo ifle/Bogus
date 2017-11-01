@@ -184,17 +184,5 @@ namespace Bogus.Tests
             }
          }
       }
-
-       [Fact]
-       public void compress_cz()
-       {
-          var sw = Stopwatch.StartNew();
-          var a = new Address();
-          var s = a.StreetName();
-          sw.Stop();
-          output.WriteLine(sw.ElapsedMilliseconds.DumpString());
-
-          
-       }
    }
 }
