@@ -36,23 +36,6 @@
     <EmbeddedResource Include="data\*.locale.bson.lz4" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\lz4net\src\LZ4.silverlight\LZ4Codec.silverlight.cs" Link="Compression\LZ4Codec.silverlight.cs" />
-    <Compile Include="..\lz4net\src\LZ4ps\LZ4Codec.cs" Link="Compression\LZ4ps\LZ4Codec.cs" />
-    <Compile Include="..\lz4net\src\LZ4ps\LZ4Codec.Safe.cs" Link="Compression\LZ4ps\LZ4Codec.Safe.cs" />
-    <Compile Include="..\lz4net\src\LZ4ps\LZ4Codec.Safe32.Dirty.cs" Link="Compression\LZ4ps\LZ4Codec.Safe32.Dirty.cs" />
-    <Compile Include="..\lz4net\src\LZ4ps\LZ4Codec.Safe32HC.Dirty.cs" Link="Compression\LZ4ps\LZ4Codec.Safe32HC.Dirty.cs" />
-    <Compile Include="..\lz4net\src\LZ4ps\LZ4Codec.Safe64.Dirty.cs" Link="Compression\LZ4ps\LZ4Codec.Safe64.Dirty.cs" />
-    <Compile Include="..\lz4net\src\LZ4ps\LZ4Codec.Safe64HC.Dirty.cs" Link="Compression\LZ4ps\LZ4Codec.Safe64HC.Dirty.cs" />
-    <Compile Include="..\lz4net\src\LZ4\ILZ4Service.cs" Link="Compression\LZ4\ILZ4Service.cs" />
-    <Compile Include="..\lz4net\src\LZ4\LZ4Codec.cs" Link="Compression\LZ4\LZ4Codec.cs" />
-    <Compile Include="..\lz4net\src\LZ4\LZ4Stream.cs" Link="Compression\LZ4\LZ4Stream.cs" />
-    <Compile Include="..\lz4net\src\LZ4\LZ4Stream.windows.cs" Link="Compression\LZ4\LZ4Stream.windows.cs" />
-    <Compile Include="..\lz4net\src\LZ4\LZ4StreamFlags.cs" Link="Compression\LZ4\LZ4StreamFlags.cs" />
-    <Compile Include="..\lz4net\src\LZ4\LZ4StreamMode.cs" Link="Compression\LZ4\LZ4StreamMode.cs" />
-    <Compile Include="..\lz4net\src\LZ4\Services\Safe32LZ4Service.cs" Link="Compression\LZ4\Safe32LZ4Service.cs" />
-    <Compile Include="..\lz4net\src\LZ4\Services\Safe64LZ4Service.cs" Link="Compression\LZ4\Safe64LZ4Service.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Roslynator.Analyzers" Version="1.5.0" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
