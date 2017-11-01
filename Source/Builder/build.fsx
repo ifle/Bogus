@@ -194,6 +194,20 @@ Target "setup-snk"(fun _ ->
     XmlPokeInnerText BogusProject.ProjectFile "/Project/PropertyGroup/SignAssembly" "true"
 )
 
+open LZ4;
+open System.IO;
+
+Target "compress-data" (fun _ ->
+   traceHeader "Compressing data folder and removing whitespace"
+   
+   for file in !!(BogusProject.Folder @@ "data" @@ "*.bson") do
+      traceFAKE "Compressing %s" file
+      let bytes = File.ReadAllBytes(file)
+      let compressedBytes = LZ4Codec.WrapHC(bytes)
+      let compressedFileName = changeExt "bson.lz4" file
+      File.WriteAllBytes(compressedFileName, compressedBytes)
+      
+)
 
 "Clean"
     ==> "restore"

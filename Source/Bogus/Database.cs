@@ -13,6 +13,9 @@ namespace Bogus
    /// </summary>
    public static class Database
    {
+      private const string ResourcePrefix = "Bogus.data.";
+      private const string ResourceSuffix = ".locale.bson.lz4";
+
       /// <summary>
       /// The root of all locales in a single BObject.
       /// </summary>
@@ -27,8 +30,8 @@ namespace Bogus
          var asm = typeof(Database).Assembly;
 
          return asm.GetManifestResourceNames()
-            .Where(name => name.EndsWith(".locale.bson"))
-            .Select(name => name.Replace("Bogus.data.", "").Replace(".locale.bson", ""))
+            .Where(name => name.EndsWith(ResourceSuffix))
+            .Select(name => name.Replace(ResourcePrefix, "").Replace(ResourceSuffix, ""))
             .ToArray();
       }
 
@@ -47,14 +50,16 @@ namespace Bogus
       internal static BObject InitLocale(string locale)
       {
          var asm = typeof(Database).Assembly;
-         var resourceName = $"Bogus.data.{locale}.locale.bson";
+         var resourceName = $"{ResourcePrefix}{locale}{ResourceSuffix}";
 
          using( var s = asm.GetManifestResourceStream(resourceName) )
          using( var ms = new MemoryStream() )
          {
             s.CopyTo(ms);
+            var compressed = ms.ToArray();
+            var localeData = LZ4.LZ4Codec.Unwrap(compressed);
 
-            return Bson.Bson.Load(ms.ToArray());
+            return Bson.Bson.Load(localeData);
          }
       }
 

@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
+using Bogus.DataSets;
 using FluentAssertions;
 using MoreLinq;
 using Newtonsoft.Json;
@@ -182,5 +184,17 @@ namespace Bogus.Tests
             }
          }
       }
+
+       [Fact]
+       public void compress_cz()
+       {
+          var sw = Stopwatch.StartNew();
+          var a = new Address();
+          var s = a.StreetName();
+          sw.Stop();
+          output.WriteLine(sw.ElapsedMilliseconds.DumpString());
+
+          
+       }
    }
 }

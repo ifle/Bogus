@@ -33,7 +33,7 @@
     <DefineConstants>$(DefineConstants);STANDARD</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="data\*.locale.bson" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+    <EmbeddedResource Include="data\*.locale.bson.lz4" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\lz4net\src\LZ4.silverlight\LZ4Codec.silverlight.cs" Link="Compression\LZ4Codec.silverlight.cs" />

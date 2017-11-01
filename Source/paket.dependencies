@@ -2,7 +2,6 @@ version 4.4.0
 
 source https://www.nuget.org/api/v2
 
-nuget Newtonsoft.Json == 10.0.3
 
 group build
     generate_load_scripts: true
@@ -15,5 +14,6 @@ group build
     nuget DotNetZip == 1.10.1
     nuget NuGet.CommandLine == 3.5.0
     nuget xunit.runner.console == 2.2.0
-    nuget Newtonsoft.Json
+    nuget Newtonsoft.Json == 10.0.3
     nuget secure-file
+    nuget lz4net == 1.0.15.93
