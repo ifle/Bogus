@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using Bogus.Bson;
-
+using Bogus.Compression.LZ4;
 
 namespace Bogus
 {
@@ -58,7 +58,7 @@ namespace Bogus
          {
             s.CopyTo(ms);
             var compressed = ms.ToArray();
-            var localeData = LZ4.LZ4Codec.Unwrap(compressed);
+            var localeData = LZ4Codec.Unwrap(compressed);
 
             return Bson.Bson.Load(localeData);
          }

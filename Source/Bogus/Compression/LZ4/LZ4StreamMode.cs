@@ -1,3 +1,4 @@
+namespace Bogus.Compression {
 #region license
 
 /*
@@ -39,4 +40,5 @@ namespace LZ4
 		/// <summary>Decompress</summary>
 		Decompress,
 	}
+}
 }

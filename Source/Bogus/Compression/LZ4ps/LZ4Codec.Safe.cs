@@ -1,4 +1,5 @@
-﻿#region license
+namespace Bogus.Compression {
+#region license
 
 /*
 Copyright (c) 2013, Milosz Krajewski
@@ -755,3 +756,4 @@ namespace LZ4ps
 
 // ReSharper restore InconsistentNaming
 // ReSharper restore CheckNamespace
+}

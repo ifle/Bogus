@@ -8,7 +8,7 @@ group build
     
     source https://www.nuget.org/api/v2
 
-    nuget FAKE == 4.61.2
+    nuget FAKE == 4.63.2
     nuget FSharp.Data
     nuget Z.ExtensionMethods.WithNamespace
     nuget DotNetZip == 1.10.1

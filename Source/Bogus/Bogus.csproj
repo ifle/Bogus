@@ -43,7 +43,6 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Compression\LZ4ps\" />
-    <Folder Include="Compression\LZ4\" />
+    <Folder Include="Compression\" />
   </ItemGroup>
 </Project>

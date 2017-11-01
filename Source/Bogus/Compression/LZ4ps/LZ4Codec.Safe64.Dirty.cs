@@ -1,4 +1,5 @@
-﻿#region LZ4 original
+namespace Bogus.Compression {
+#region LZ4 original
 
 /*
    LZ4 - Fast LZ compression algorithm
@@ -806,3 +807,4 @@ namespace LZ4ps
 // ReSharper restore TooWideLocalVariableScope
 // ReSharper restore InconsistentNaming
 // ReSharper restore CheckNamespace
+}

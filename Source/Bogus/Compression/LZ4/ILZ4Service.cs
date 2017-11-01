@@ -1,4 +1,5 @@
-﻿#region license
+namespace Bogus.Compression {
+#region license
 
 /*
 Copyright (c) 2013, Milosz Krajewski
@@ -34,4 +35,5 @@ namespace LZ4
 		int EncodeHC(byte[] input, int inputOffset, int inputLength, byte[] output, int outputOffset, int outputLength);
 		int Decode(byte[] input, int inputOffset, int inputLength, byte[] output, int outputOffset, int outputLength, bool knownOutputLength);
 	}
+}
 }

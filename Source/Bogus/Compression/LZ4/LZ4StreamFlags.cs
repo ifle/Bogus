@@ -1,4 +1,5 @@
-﻿using System;
+namespace Bogus.Compression {
+using System;
 
 namespace LZ4
 {
@@ -24,4 +25,5 @@ namespace LZ4
 		/// <summary>Default settings.</summary>
 		Default = None,
 	}
+}
 }
